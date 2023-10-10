@@ -10,8 +10,8 @@ const Memes = () => {
         setTextmeme(e.target.value);
     }
 
-    const selecionarImg = (e) => {
-        setTextmeme(e.target.value);
+    const seleccionarImg = (e) => {
+        setImgmeme(e.target.value);
     }
 
     const descargar = (e) => {
@@ -31,7 +31,7 @@ const Memes = () => {
             <input onChange={textomeme} className="form-control w-50 m-50 m-auto d-block" type="text" placeholder="" />
 
             <h3 className="mt-3 mb-3 text-center">Elegi tu imagen favorita</h3>
-            <select onChange={selecionarImg} className="form-select form-select-lg mb-3 w-50 m-auto" aria-label=".form-select-lg example">
+            <select onChange={seleccionarImg} className="form-select form-select-lg mb-3 w-50 m-auto" aria-label=".form-select-lg example">
                 <option value={1}>Futurama</option>
                 <option value={2}>Bob esponja</option>
                 <option value={3}>Señora</option>
@@ -40,7 +40,7 @@ const Memes = () => {
 
             <figure className="text-center" id="exportar">
                 <p>{textmeme}</p>
-                <img src={'./img/${imgmeme}.jpg'} className="figure-img mt-3 d-block m-auto" alt="meme"/>
+                <img src={`../img/${imgmeme}.jpg`} className="figure-img mt-3 d-block m-auto" alt="meme"/>
             </figure>
 
             <button onClick={descargar} type="button" className="btn btn-primary mt-4 mb-4">Descargar meme</button>
