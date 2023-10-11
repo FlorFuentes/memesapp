@@ -1,4 +1,3 @@
-//import logo from './logo.svg';
 import './App.css';
 import Memes from './components/Memes.jsx';
 
